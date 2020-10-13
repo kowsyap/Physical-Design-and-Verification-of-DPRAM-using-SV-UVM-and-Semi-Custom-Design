@@ -37,8 +37,8 @@ Verification Environment is used to check the functional correctness of the Desi
 
 ### Components and Hierarchy 
 * **Mailbox :** Mailbox is a way to allow different processes to exchange data between each other
-* **Base Packet :** It is a base class which contains variables or properties which need to be sent and received [<sounce code>](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/pkt.sv)
-* ** Configurations :** It is a class with configurations to different test cases and command types [<sounce code>](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/cfg.sv)
+* **Base Packet :** It is a base class which contains variables or properties which need to be sent and received [|sounce code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/pkt.sv)
+* **Configurations :** It is a class with configurations to different test cases and command types [<sounce code>](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/cfg.sv)
 * **Tx Generator :**	Generates different input stimulus to be driven to DUT [<sounce code>](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/txgen.sv)
 * **Cover Group :** Covergroup is a user-defined type that encapsulates the specification of a coverage model. It checks the functional coverage of the model [<sounce code>](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/cov.sv) 
 * **Driver :**	Drives the generated stimulus to the design 
