@@ -30,8 +30,8 @@ Verification Environment is used to check the functional correctness of the Desi
 * Before tape-out our design should be verified more than 90% successfully
 
 In this project we used 2 different verfication methodologies. They are:
-* SV Verification
-* UVM Verification
+* **SV Verification**
+* **UVM Verification**
 
 ## SV ENVIRONMENT
 
@@ -114,12 +114,12 @@ Here, used analysis ports to tranfer data from one component to another
     
 The components of an agent are,
 
-  1. **UVM DRIVER :** Responsible for driving the packet level data inside sequence_item into pin level (to DUT). Here, it drives sequence_item to first port to write and second port to read[|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/DRV.sv)
+  1. **UVM DRIVER :** Responsible for driving the packet level data inside sequence_item into pin level (to DUT). Here, it drives sequence_item to first port to write and second port to read. [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/DRV.sv)
 
-  2. **UVM SEQUENCER :** Responsible for routing the data packet’s(sequence_item) generated in sequence to the driver or vice verse. [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/SEQR.sv)
+  2. **UVM SEQUENCER :** Responsible for routing the data packet’s(sequence_item) generated in sequence to the driver or vice verse.  [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/SEQR.sv)
 
   3. **UVM MONITOR :** Observes pin level activity on interface signals and converts into packet level which is sent to components such as scoreboards.
-      - Monitor1 -> Monitors the inputs of first port[|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/MON1.sv)
+      - Monitor1 -> Monitors the inputs of first port [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/MON1.sv)
       - Monitor2 -> Monitors the output of second port [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/MON2.sv)
 * **UVM Subscriber :** Could have functional coverage groups and coverpoints in a subscriber and have that sampled whenever it receives an object from the agent. [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/COV.sv)
 
