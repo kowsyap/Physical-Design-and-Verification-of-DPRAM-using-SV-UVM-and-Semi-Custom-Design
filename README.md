@@ -72,9 +72,17 @@ In this project we used 2 different verfication methodologies. They are:
 
 ### Result
 
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans1a.PNG)
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans1b.PNG)
+
 ### Graph
 
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/graph1.PNG)
+
 ### Report
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/report1.PNG)
 
 ## UVM ENVIRONMENT
 
@@ -132,13 +140,21 @@ The components of an agent are,
 3. Change dirctory and open project file
 4. go to transcript and type
 ```
-> vlog +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/uvm.sv  +incdir+. UVM_TOP.sv +define+UVM_NO_DPI
+> vlog +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/uvm.sv  +incdir+. TOP.sv +define+UVM_NO_DPI
 > vsim dram_top
 > run -all
 ```
 
 ### Result
 
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans2a.PNG)
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans2b.PNG)
+
 ### Graph
 
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/graph2.PNG)
+
 ### Report
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/report2.PNG)
