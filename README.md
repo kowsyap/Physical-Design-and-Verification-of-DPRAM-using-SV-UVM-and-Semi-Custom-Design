@@ -78,7 +78,7 @@ In this project we used 2 different verfication methodologies. They are:
 
 ### Graph
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph1.png)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph1.PNG)
 
 ### Coverage
 
