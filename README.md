@@ -72,17 +72,21 @@ In this project we used 2 different verfication methodologies. They are:
 
 ### Result
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans1a.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans1a.PNG)
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans1b.PNG)
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/cover1.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans1b.PNG)
+
 ### Graph
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/graph1.png)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph1.png)
+
+### Coverage
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/cover1.PNG)
 
 ### Report
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/report1.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report1.PNG)
 
 ## UVM ENVIRONMENT
 
@@ -147,14 +151,18 @@ The components of an agent are,
 
 ### Result
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans2a.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans2a.PNG)
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/trans2b.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans2b.PNG)
 
 ### Graph
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/graph2.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph2.PNG)
+
+### Coverage
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/cover2.PNG)
 
 ### Report
 
-![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/tree/main/Extras/report2.PNG)
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report2.PNG)
