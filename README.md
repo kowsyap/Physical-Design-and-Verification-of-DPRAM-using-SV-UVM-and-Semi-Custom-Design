@@ -55,3 +55,13 @@ Verification Environment is used to check the functional correctness of the Desi
 * **Top :** Contains all the components, assigns clock and assembles DUT and Test with Interface [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/top.sv)
 
 
+### Steps to Compile and run
+
+1. Open Questasim
+2. Open project file
+3. Go to compile and click on compile all
+4. go to transcript and type
+```
+vsim top
+run
+```
