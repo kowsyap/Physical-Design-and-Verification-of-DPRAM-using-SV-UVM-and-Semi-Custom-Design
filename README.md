@@ -66,8 +66,8 @@ In this project we used 2 different verfication methodologies. They are:
 3. Go to compile and click on compile all
 4. go to transcript and type
 ```
-vsim top
-run
+> vsim top
+> run
 ```
 
 ### Result
@@ -99,6 +99,7 @@ Here, used analysis ports to tranfer data from one component to another
 * **UVM Agent :** UVM agent groups the uvm_components specific to an interface or protocol.  **Example:** groups the components associated with BFM(Bus Functional Model). 
     - Agent1 [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/AGENT1.sv)
     - Agent2 [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/AGENT2.sv)
+    
 The components of an agent are,
 
   1. **UVM DRIVER :** Responsible for driving the packet level data inside sequence_item into pin level (to DUT). Here, it drives sequence_item to first port to write and second port to read[|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/DRV.sv)
@@ -124,3 +125,20 @@ The components of an agent are,
 * **Interface :**	Contains design signals that can be driven or monitored [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/INTERFACE.sv)
 
 * **TOP :** Top is the module which assembles test, DUT and interface, assigns clock and runs the test [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/TOP.sv)
+
+### Steps to Compile and run
+1. Download UVM 1.1d library and save it in path: C:/questasim64_10.7c/verilog_src/ (assume questa version be 10.7c)
+2. Open Questasim
+3. Change dirctory and open project file
+4. go to transcript and type
+```
+> vlog +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/uvm.sv  +incdir+. UVM_TOP.sv +define+UVM_NO_DPI
+> vsim dram_top
+> run -all
+```
+
+### Result
+
+### Graph
+
+### Report
