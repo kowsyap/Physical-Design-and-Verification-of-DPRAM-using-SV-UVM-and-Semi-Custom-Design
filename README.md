@@ -67,7 +67,7 @@ In this project we used 2 different verfication methodologies. They are:
 * **Top :** Contains all the components, assigns clock and assembles DUT and Test with Interface [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/top.sv)
 
 
-### Steps to Compile and run
+### Steps to Compile and Run
 
 1. Open Questasim
 2. Open project file
@@ -146,7 +146,7 @@ The components of an agent are,
 
 * **TOP :** Top is the module which assembles test, DUT and interface, assigns clock and runs the test [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/TOP.sv)
 
-### Steps to Compile and run
+### Steps to Compile and Run
 1. Download UVM 1.1d library and save it in path: C:/questasim64_10.7c/verilog_src/ (assume questa version be 10.7c)
 2. Open Questasim
 3. Change dirctory and open project file
@@ -174,3 +174,10 @@ The components of an agent are,
 ### Report
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report2.PNG)
+
+```
+For queries: 
+Email: pranaykowsyap@gmail.com 
+Instagram: pk_ledgar
+linked in: https://www.linkedin.com/in/kowsyap-pranay-46779917b
+```
