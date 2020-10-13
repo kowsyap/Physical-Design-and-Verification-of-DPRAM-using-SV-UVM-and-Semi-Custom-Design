@@ -1,0 +1,329 @@
+# Reading C:/questasim64_10.7c/tcl/vsim/pref.tcl
+# //  Questa Sim-64
+# //  Version 10.7c win64 Aug 18 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project sv_env
+# Compile of cfg.sv was successful.
+# Compile of cov.sv was successful.
+# Compile of drv.sv was successful.
+# Compile of dut.sv was successful.
+# Compile of env.sv was successful.
+# Compile of interface.sv was successful.
+# Compile of mon.sv was successful.
+# Compile of pkt.sv was successful.
+# Compile of sb.sv was successful.
+# Compile of test.sv was successful.
+# Compile of top.sv was successful.
+# Compile of txgen.sv was successful.
+# Compile of drv1.sv was successful.
+# Compile of drv2.sv was successful.
+# Compile of mon1.sv was successful.
+# Compile of mon2.sv was successful.
+# 16 compiles, 0 failed with no errors.
+vsim top
+# vsim top 
+# Start time: 18:45:05 on Oct 13,2020
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.top_sv_unit(fast)
+# Loading work.top(fast)
+# Loading work.dram_dut(fast)
+# Loading work.dram_tb(fast)
+# Loading work.dram_if(fast)
+add wave -position insertpoint sim:/top/intf/*
+run
+#                    0, ENV::RUN PHASE
+#                    0, TXGEN::RUN PHASE
+#                    0, COVER::RUN PHASE
+#                    0, DRV1::RUN PHASE
+#                    0, DRV2::RUN PHASE
+#                    0, MON1::RUN PHASE
+#                    0, MON2::RUN PHASE
+#                    0, SB::RUN PHASE
+# expected packet='{data_in:129, addr:36, data_out:0, en:0, wr:0}
+#                   10, driver1:written pkt.wr=0,pkt.addr=36,pkt.datain=129
+#                   20, driver2:written pkt.wr=1,pkt.addr=36
+#                   25, monitor2: read addr=36 dataout=129
+# received pkt='{data_in:0, addr:36, data_out:129, en:1, wr:1}
+#                   25, scoreboard---->MATCHED, pkt2.addr=36,pkt2.data_out=129
+# expected packet='{data_in:99, addr:9, data_out:0, en:1, wr:0}
+#                   30, driver1:written pkt.wr=0,pkt.addr= 9,pkt.datain= 99
+#                   35, monitor2: read addr=36 dataout=129
+# received pkt='{data_in:0, addr:36, data_out:129, en:1, wr:1}
+#                   35, scoreboard---->MATCHED, pkt2.addr=36,pkt2.data_out=129
+#                   40, driver2:written pkt.wr=1,pkt.addr= 9
+#                   45, monitor2: read addr= 9 dataout= 99
+# received pkt='{data_in:0, addr:9, data_out:99, en:1, wr:1}
+#                   45, scoreboard---->MATCHED, pkt2.addr=9,pkt2.data_out=99
+# expected packet='{data_in:141, addr:13, data_out:0, en:1, wr:0}
+#                   50, driver1:written pkt.wr=0,pkt.addr=13,pkt.datain=141
+#                   55, monitor2: read addr= 9 dataout= 99
+# received pkt='{data_in:0, addr:9, data_out:99, en:1, wr:1}
+#                   55, scoreboard---->MATCHED, pkt2.addr=9,pkt2.data_out=99
+#                   60, driver2:written pkt.wr=1,pkt.addr=13
+#                   65, monitor2: read addr=13 dataout=141
+# received pkt='{data_in:0, addr:13, data_out:141, en:1, wr:1}
+#                   65, scoreboard---->MATCHED, pkt2.addr=13,pkt2.data_out=141
+# expected packet='{data_in:18, addr:37, data_out:0, en:1, wr:0}
+#                   70, driver1:written pkt.wr=0,pkt.addr=37,pkt.datain= 18
+#                   75, monitor2: read addr=13 dataout=141
+# received pkt='{data_in:0, addr:13, data_out:141, en:1, wr:1}
+#                   75, scoreboard---->MATCHED, pkt2.addr=13,pkt2.data_out=141
+#                   80, driver2:written pkt.wr=1,pkt.addr=37
+#                   85, monitor2: read addr=37 dataout= 18
+# received pkt='{data_in:0, addr:37, data_out:18, en:1, wr:1}
+#                   85, scoreboard---->MATCHED, pkt2.addr=37,pkt2.data_out=18
+# expected packet='{data_in:13, addr:1, data_out:0, en:1, wr:0}
+#                   90, driver1:written pkt.wr=0,pkt.addr= 1,pkt.datain= 13
+#                   95, monitor2: read addr=37 dataout= 18
+# received pkt='{data_in:0, addr:37, data_out:18, en:1, wr:1}
+#                   95, scoreboard---->MATCHED, pkt2.addr=37,pkt2.data_out=18
+#                  100, driver2:written pkt.wr=1,pkt.addr= 1
+run
+#                  105, monitor2: read addr= 1 dataout= 13
+# received pkt='{data_in:0, addr:1, data_out:13, en:1, wr:1}
+#                  105, scoreboard---->MATCHED, pkt2.addr=1,pkt2.data_out=13
+# expected packet='{data_in:61, addr:54, data_out:0, en:1, wr:0}
+#                  110, driver1:written pkt.wr=0,pkt.addr=54,pkt.datain= 61
+#                  115, monitor2: read addr= 1 dataout= 13
+# received pkt='{data_in:0, addr:1, data_out:13, en:1, wr:1}
+#                  115, scoreboard---->MATCHED, pkt2.addr=1,pkt2.data_out=13
+#                  120, driver2:written pkt.wr=1,pkt.addr=54
+#                  125, monitor2: read addr=54 dataout= 61
+# received pkt='{data_in:0, addr:54, data_out:61, en:1, wr:1}
+#                  125, scoreboard---->MATCHED, pkt2.addr=54,pkt2.data_out=61
+# expected packet='{data_in:140, addr:45, data_out:0, en:1, wr:0}
+#                  130, driver1:written pkt.wr=0,pkt.addr=45,pkt.datain=140
+#                  135, monitor2: read addr=54 dataout= 61
+# received pkt='{data_in:0, addr:54, data_out:61, en:1, wr:1}
+#                  135, scoreboard---->MATCHED, pkt2.addr=54,pkt2.data_out=61
+#                  140, driver2:written pkt.wr=1,pkt.addr=45
+#                  145, monitor2: read addr=45 dataout=140
+# received pkt='{data_in:0, addr:45, data_out:140, en:1, wr:1}
+#                  145, scoreboard---->MATCHED, pkt2.addr=45,pkt2.data_out=140
+# expected packet='{data_in:198, addr:57, data_out:0, en:1, wr:0}
+#                  150, driver1:written pkt.wr=0,pkt.addr=57,pkt.datain=198
+#                  155, monitor2: read addr=45 dataout=140
+# received pkt='{data_in:0, addr:45, data_out:140, en:1, wr:1}
+#                  155, scoreboard---->MATCHED, pkt2.addr=45,pkt2.data_out=140
+#                  160, driver2:written pkt.wr=1,pkt.addr=57
+#                  165, monitor2: read addr=57 dataout=198
+# received pkt='{data_in:0, addr:57, data_out:198, en:1, wr:1}
+#                  165, scoreboard---->MATCHED, pkt2.addr=57,pkt2.data_out=198
+# expected packet='{data_in:170, addr:5, data_out:0, en:1, wr:0}
+#                  170, driver1:written pkt.wr=0,pkt.addr= 5,pkt.datain=170
+#                  175, monitor2: read addr=57 dataout=198
+# received pkt='{data_in:0, addr:57, data_out:198, en:1, wr:1}
+#                  175, scoreboard---->MATCHED, pkt2.addr=57,pkt2.data_out=198
+#                  180, driver2:written pkt.wr=1,pkt.addr= 5
+#                  185, monitor2: read addr= 5 dataout=170
+# received pkt='{data_in:0, addr:5, data_out:170, en:1, wr:1}
+#                  185, scoreboard---->MATCHED, pkt2.addr=5,pkt2.data_out=170
+# expected packet='{data_in:119, addr:37, data_out:0, en:1, wr:0}
+#                  190, driver1:written pkt.wr=0,pkt.addr=37,pkt.datain=119
+#                  195, monitor2: read addr= 5 dataout=170
+# received pkt='{data_in:0, addr:5, data_out:170, en:1, wr:1}
+#                  195, scoreboard---->MATCHED, pkt2.addr=5,pkt2.data_out=170
+#                  200, COVER::RUN PHASE
+#                  200, driver2:written pkt.wr=1,pkt.addr=37
+run
+#                  205, monitor2: read addr=37 dataout=119
+# received pkt='{data_in:0, addr:37, data_out:119, en:1, wr:1}
+#                  205, scoreboard---->MATCHED, pkt2.addr=37,pkt2.data_out=119
+# expected packet='{data_in:143, addr:18, data_out:0, en:1, wr:0}
+#                  210, driver1:written pkt.wr=0,pkt.addr=18,pkt.datain=143
+#                  215, monitor2: read addr=37 dataout=119
+# received pkt='{data_in:0, addr:37, data_out:119, en:1, wr:1}
+#                  215, scoreboard---->MATCHED, pkt2.addr=37,pkt2.data_out=119
+#                  220, driver2:written pkt.wr=1,pkt.addr=18
+#                  225, monitor2: read addr=18 dataout=143
+# received pkt='{data_in:0, addr:18, data_out:143, en:1, wr:1}
+#                  225, scoreboard---->MATCHED, pkt2.addr=18,pkt2.data_out=143
+# expected packet='{data_in:206, addr:50, data_out:0, en:1, wr:0}
+#                  230, driver1:written pkt.wr=0,pkt.addr=50,pkt.datain=206
+#                  235, monitor2: read addr=18 dataout=143
+# received pkt='{data_in:0, addr:18, data_out:143, en:1, wr:1}
+#                  235, scoreboard---->MATCHED, pkt2.addr=18,pkt2.data_out=143
+#                  240, driver2:written pkt.wr=1,pkt.addr=50
+#                  245, monitor2: read addr=50 dataout=206
+# received pkt='{data_in:0, addr:50, data_out:206, en:1, wr:1}
+#                  245, scoreboard---->MATCHED, pkt2.addr=50,pkt2.data_out=206
+# expected packet='{data_in:197, addr:40, data_out:0, en:1, wr:0}
+#                  250, driver1:written pkt.wr=0,pkt.addr=40,pkt.datain=197
+#                  255, monitor2: read addr=50 dataout=206
+# received pkt='{data_in:0, addr:50, data_out:206, en:1, wr:1}
+#                  255, scoreboard---->MATCHED, pkt2.addr=50,pkt2.data_out=206
+#                  260, driver2:written pkt.wr=1,pkt.addr=40
+#                  265, monitor2: read addr=40 dataout=197
+# received pkt='{data_in:0, addr:40, data_out:197, en:1, wr:1}
+#                  265, scoreboard---->MATCHED, pkt2.addr=40,pkt2.data_out=197
+# expected packet='{data_in:189, addr:28, data_out:0, en:1, wr:0}
+#                  270, driver1:written pkt.wr=0,pkt.addr=28,pkt.datain=189
+#                  275, monitor2: read addr=40 dataout=197
+# received pkt='{data_in:0, addr:40, data_out:197, en:1, wr:1}
+#                  275, scoreboard---->MATCHED, pkt2.addr=40,pkt2.data_out=197
+#                  280, driver2:written pkt.wr=1,pkt.addr=28
+#                  285, monitor2: read addr=28 dataout=189
+# received pkt='{data_in:0, addr:28, data_out:189, en:1, wr:1}
+#                  285, scoreboard---->MATCHED, pkt2.addr=28,pkt2.data_out=189
+# expected packet='{data_in:101, addr:45, data_out:0, en:1, wr:0}
+#                  290, driver1:written pkt.wr=0,pkt.addr=45,pkt.datain=101
+#                  295, monitor2: read addr=28 dataout=189
+# received pkt='{data_in:0, addr:28, data_out:189, en:1, wr:1}
+#                  295, scoreboard---->MATCHED, pkt2.addr=28,pkt2.data_out=189
+#                  300, driver2:written pkt.wr=1,pkt.addr=45
+run
+#                  305, monitor2: read addr=45 dataout=101
+# received pkt='{data_in:0, addr:45, data_out:101, en:1, wr:1}
+#                  305, scoreboard---->MATCHED, pkt2.addr=45,pkt2.data_out=101
+# expected packet='{data_in:10, addr:35, data_out:0, en:1, wr:0}
+#                  310, driver1:written pkt.wr=0,pkt.addr=35,pkt.datain= 10
+#                  315, monitor2: read addr=45 dataout=101
+# received pkt='{data_in:0, addr:45, data_out:101, en:1, wr:1}
+#                  315, scoreboard---->MATCHED, pkt2.addr=45,pkt2.data_out=101
+#                  320, driver2:written pkt.wr=1,pkt.addr=35
+#                  325, monitor2: read addr=35 dataout= 10
+# received pkt='{data_in:0, addr:35, data_out:10, en:1, wr:1}
+#                  325, scoreboard---->MATCHED, pkt2.addr=35,pkt2.data_out=10
+# expected packet='{data_in:32, addr:0, data_out:0, en:1, wr:0}
+#                  330, driver1:written pkt.wr=0,pkt.addr= 0,pkt.datain= 32
+#                  335, monitor2: read addr=35 dataout= 10
+# received pkt='{data_in:0, addr:35, data_out:10, en:1, wr:1}
+#                  335, scoreboard---->MATCHED, pkt2.addr=35,pkt2.data_out=10
+#                  340, driver2:written pkt.wr=1,pkt.addr= 0
+#                  345, monitor2: read addr= 0 dataout= 32
+# received pkt='{data_in:0, addr:0, data_out:32, en:1, wr:1}
+#                  345, scoreboard---->MATCHED, pkt2.addr=0,pkt2.data_out=32
+# expected packet='{data_in:157, addr:42, data_out:0, en:1, wr:0}
+#                  350, driver1:written pkt.wr=0,pkt.addr=42,pkt.datain=157
+#                  355, monitor2: read addr= 0 dataout= 32
+# received pkt='{data_in:0, addr:0, data_out:32, en:1, wr:1}
+#                  355, scoreboard---->MATCHED, pkt2.addr=0,pkt2.data_out=32
+#                  360, driver2:written pkt.wr=1,pkt.addr=42
+#                  365, monitor2: read addr=42 dataout=157
+# received pkt='{data_in:0, addr:42, data_out:157, en:1, wr:1}
+#                  365, scoreboard---->MATCHED, pkt2.addr=42,pkt2.data_out=157
+# expected packet='{data_in:19, addr:22, data_out:0, en:1, wr:0}
+#                  370, driver1:written pkt.wr=0,pkt.addr=22,pkt.datain= 19
+#                  375, monitor2: read addr=42 dataout=157
+# received pkt='{data_in:0, addr:42, data_out:157, en:1, wr:1}
+#                  375, scoreboard---->MATCHED, pkt2.addr=42,pkt2.data_out=157
+#                  380, driver2:written pkt.wr=1,pkt.addr=22
+#                  385, monitor2: read addr=22 dataout= 19
+# received pkt='{data_in:0, addr:22, data_out:19, en:1, wr:1}
+#                  385, scoreboard---->MATCHED, pkt2.addr=22,pkt2.data_out=19
+# expected packet='{data_in:83, addr:13, data_out:0, en:1, wr:0}
+#                  390, driver1:written pkt.wr=0,pkt.addr=13,pkt.datain= 83
+#                  395, monitor2: read addr=22 dataout= 19
+# received pkt='{data_in:0, addr:22, data_out:19, en:1, wr:1}
+#                  395, scoreboard---->MATCHED, pkt2.addr=22,pkt2.data_out=19
+#                  400, COVER::RUN PHASE
+#                  400, driver2:written pkt.wr=1,pkt.addr=13
+run
+#                  405, monitor2: read addr=13 dataout= 83
+# received pkt='{data_in:0, addr:13, data_out:83, en:1, wr:1}
+#                  405, scoreboard---->MATCHED, pkt2.addr=13,pkt2.data_out=83
+# expected packet='{data_in:213, addr:43, data_out:0, en:1, wr:0}
+#                  410, driver1:written pkt.wr=0,pkt.addr=43,pkt.datain=213
+#                  415, monitor2: read addr=13 dataout= 83
+# received pkt='{data_in:0, addr:13, data_out:83, en:1, wr:1}
+#                  415, scoreboard---->MATCHED, pkt2.addr=13,pkt2.data_out=83
+#                  420, driver2:written pkt.wr=1,pkt.addr=43
+#                  425, monitor2: read addr=43 dataout=213
+# received pkt='{data_in:0, addr:43, data_out:213, en:1, wr:1}
+#                  425, scoreboard---->MATCHED, pkt2.addr=43,pkt2.data_out=213
+# expected packet='{data_in:174, addr:2, data_out:0, en:1, wr:0}
+#                  430, driver1:written pkt.wr=0,pkt.addr= 2,pkt.datain=174
+#                  435, monitor2: read addr=43 dataout=213
+# received pkt='{data_in:0, addr:43, data_out:213, en:1, wr:1}
+#                  435, scoreboard---->MATCHED, pkt2.addr=43,pkt2.data_out=213
+#                  440, driver2:written pkt.wr=1,pkt.addr= 2
+#                  445, monitor2: read addr= 2 dataout=174
+# received pkt='{data_in:0, addr:2, data_out:174, en:1, wr:1}
+#                  445, scoreboard---->MATCHED, pkt2.addr=2,pkt2.data_out=174
+# expected packet='{data_in:207, addr:29, data_out:0, en:1, wr:0}
+#                  450, driver1:written pkt.wr=0,pkt.addr=29,pkt.datain=207
+#                  455, monitor2: read addr= 2 dataout=174
+# received pkt='{data_in:0, addr:2, data_out:174, en:1, wr:1}
+#                  455, scoreboard---->MATCHED, pkt2.addr=2,pkt2.data_out=174
+#                  460, driver2:written pkt.wr=1,pkt.addr=29
+#                  465, monitor2: read addr=29 dataout=207
+# received pkt='{data_in:0, addr:29, data_out:207, en:1, wr:1}
+#                  465, scoreboard---->MATCHED, pkt2.addr=29,pkt2.data_out=207
+# expected packet='{data_in:10, addr:35, data_out:0, en:1, wr:0}
+#                  470, driver1:written pkt.wr=0,pkt.addr=35,pkt.datain= 10
+#                  475, monitor2: read addr=29 dataout=207
+# received pkt='{data_in:0, addr:29, data_out:207, en:1, wr:1}
+#                  475, scoreboard---->MATCHED, pkt2.addr=29,pkt2.data_out=207
+#                  480, driver2:written pkt.wr=1,pkt.addr=35
+#                  485, monitor2: read addr=35 dataout= 10
+# received pkt='{data_in:0, addr:35, data_out:10, en:1, wr:1}
+#                  485, scoreboard---->MATCHED, pkt2.addr=35,pkt2.data_out=10
+# expected packet='{data_in:60, addr:10, data_out:0, en:1, wr:0}
+#                  490, driver1:written pkt.wr=0,pkt.addr=10,pkt.datain= 60
+#                  495, monitor2: read addr=35 dataout= 10
+# received pkt='{data_in:0, addr:35, data_out:10, en:1, wr:1}
+#                  495, scoreboard---->MATCHED, pkt2.addr=35,pkt2.data_out=10
+#                  500, driver2:written pkt.wr=1,pkt.addr=10
+run
+#                  505, monitor2: read addr=10 dataout= 60
+# received pkt='{data_in:0, addr:10, data_out:60, en:1, wr:1}
+#                  505, scoreboard---->MATCHED, pkt2.addr=10,pkt2.data_out=60
+# expected packet='{data_in:138, addr:50, data_out:0, en:1, wr:0}
+#                  510, driver1:written pkt.wr=0,pkt.addr=50,pkt.datain=138
+#                  515, monitor2: read addr=10 dataout= 60
+# received pkt='{data_in:0, addr:10, data_out:60, en:1, wr:1}
+#                  515, scoreboard---->MATCHED, pkt2.addr=10,pkt2.data_out=60
+#                  520, driver2:written pkt.wr=1,pkt.addr=50
+#                  525, monitor2: read addr=50 dataout=138
+# received pkt='{data_in:0, addr:50, data_out:138, en:1, wr:1}
+#                  525, scoreboard---->MATCHED, pkt2.addr=50,pkt2.data_out=138
+# expected packet='{data_in:216, addr:1, data_out:0, en:1, wr:0}
+#                  530, driver1:written pkt.wr=0,pkt.addr= 1,pkt.datain=216
+#                  535, monitor2: read addr=50 dataout=138
+# received pkt='{data_in:0, addr:50, data_out:138, en:1, wr:1}
+#                  535, scoreboard---->MATCHED, pkt2.addr=50,pkt2.data_out=138
+#                  540, driver2:written pkt.wr=1,pkt.addr= 1
+#                  545, monitor2: read addr= 1 dataout=216
+# received pkt='{data_in:0, addr:1, data_out:216, en:1, wr:1}
+#                  545, scoreboard---->MATCHED, pkt2.addr=1,pkt2.data_out=216
+# expected packet='{data_in:137, addr:56, data_out:0, en:1, wr:0}
+#                  550, driver1:written pkt.wr=0,pkt.addr=56,pkt.datain=137
+#                  555, monitor2: read addr= 1 dataout=216
+# received pkt='{data_in:0, addr:1, data_out:216, en:1, wr:1}
+#                  555, scoreboard---->MATCHED, pkt2.addr=1,pkt2.data_out=216
+#                  560, driver2:written pkt.wr=1,pkt.addr=56
+#                  565, monitor2: read addr=56 dataout=137
+# received pkt='{data_in:0, addr:56, data_out:137, en:1, wr:1}
+#                  565, scoreboard---->MATCHED, pkt2.addr=56,pkt2.data_out=137
+# expected packet='{data_in:182, addr:43, data_out:0, en:1, wr:0}
+#                  570, driver1:written pkt.wr=0,pkt.addr=43,pkt.datain=182
+#                  575, monitor2: read addr=56 dataout=137
+# received pkt='{data_in:0, addr:56, data_out:137, en:1, wr:1}
+#                  575, scoreboard---->MATCHED, pkt2.addr=56,pkt2.data_out=137
+#                  580, driver2:written pkt.wr=1,pkt.addr=43
+#                  585, monitor2: read addr=43 dataout=182
+# received pkt='{data_in:0, addr:43, data_out:182, en:1, wr:1}
+#                  585, scoreboard---->MATCHED, pkt2.addr=43,pkt2.data_out=182
+# expected packet='{data_in:174, addr:6, data_out:0, en:1, wr:0}
+#                  590, driver1:written pkt.wr=0,pkt.addr= 6,pkt.datain=174
+#                  595, monitor2: read addr=43 dataout=182
+# received pkt='{data_in:0, addr:43, data_out:182, en:1, wr:1}
+#                  595, scoreboard---->MATCHED, pkt2.addr=43,pkt2.data_out=182
+#                  600, COVER::RUN PHASE
+#                  600, driver2:written pkt.wr=1,pkt.addr= 6
+# A time value could not be extracted from the current line
+quit -sim
+# End time: 19:05:17 on Oct 13,2020, Elapsed time: 0:20:12
+# Errors: 0, Warnings: 0

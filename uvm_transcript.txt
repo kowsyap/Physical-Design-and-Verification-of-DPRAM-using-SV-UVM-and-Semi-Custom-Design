@@ -1,0 +1,572 @@
+cd E:/MLV_of_DPRAM/uvm
+# reading C:/questasim64_10.7c/win64/../modelsim.ini
+
+# vsim dram_top 
+# Start time: 19:07:37 on Oct 13,2020
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.uvm_pkg(fast)
+# Loading work.TOP_sv_unit(fast)
+# ** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+# This also means that later if you turn on UVM-aware debugging your debug simulations may have
+# different random seeds from your non-debug simulations.
+# Loading work.dram_top(fast)
+# Loading work.DUT(fast)
+# Loading work.intif(fast)
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /TOP_sv_unit File: MON1.sv Line: 15
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /TOP_sv_unit File: MON2.sv Line: 18
+# ** Warning: (vsim-3764) Stand-alone call to function 'get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /TOP_sv_unit::dram_drv File: DRV.sv Line: 11
+add wave -position insertpoint  \
+sim:/dram_top/inf/clk \
+sim:/dram_top/inf/data0_in \
+sim:/dram_top/inf/data0_out \
+sim:/dram_top/inf/data1_in \
+sim:/dram_top/inf/data1_out \
+sim:/dram_top/inf/add0 \
+sim:/dram_top/inf/add1 \
+sim:/dram_top/inf/en \
+sim:/dram_top/inf/wr0 \
+sim:/dram_top/inf/wr1
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO @ 0: reporter [RNTST] Running test dram_test...
+# UVM_INFO SB.sv(29) @ 0: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=  0,add= 0
+# UVM_INFO SB.sv(32) @ 0: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=  0,add= 0
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    0                                
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO MON1.sv(33) @ 5: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 5: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# UVM_INFO DRV.sv(27) @ 10: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 79,inf.add0= 2, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 15: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 15: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=  0,pkt1.data1_out=  0
+# UVM_INFO SB.sv(29) @ 15: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=  0,add= 0
+# UVM_INFO SB.sv(32) @ 15: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=  0,add= 0
+# UVM_INFO DRV.sv(39) @ 20: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 25: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 25: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 25: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    25                               
+#   end_time                     time           64    20                               
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 30: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1= 2, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 35: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 35: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=  0,pkt1.data1_out=  0
+# UVM_INFO SB.sv(29) @ 35: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 79,add= 2
+# UVM_INFO SB.sv(32) @ 35: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=  0,add= 0
+# UVM_INFO DRV.sv(39) @ 40: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 40: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 45: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 45: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 45: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 45: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    45                               
+#   end_time                     time           64    40                               
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 50: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in=201,inf.add0=41, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 55: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 55: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 79,pkt1.data1_out= 79
+# UVM_INFO SB.sv(29) @ 55: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 79,add= 2
+# UVM_INFO SB.sv(32) @ 55: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 79,add= 2
+# UVM_INFO DRV.sv(39) @ 60: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 65: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 65: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 65: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 65: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    65                               
+#   end_time                     time           64    60                               
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 70: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=41, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 75: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 75: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 79,pkt1.data1_out= 79
+# UVM_INFO SB.sv(29) @ 75: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=201,add=41
+# UVM_INFO SB.sv(32) @ 75: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 79,add= 2
+# UVM_INFO DRV.sv(39) @ 80: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 80: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 85: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 85: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 85: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 85: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    85                               
+#   end_time                     time           64    80                               
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 90: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 33,inf.add0=60, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 95: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 95: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=201,pkt1.data1_out=201
+# UVM_INFO SB.sv(29) @ 95: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=201,add=41
+# UVM_INFO SB.sv(32) @ 95: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=201,add=41
+# UVM_INFO DRV.sv(39) @ 100: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 105: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 105: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 105: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 105: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    105                              
+#   end_time                     time           64    100                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 110: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=60, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 115: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 115: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=201,pkt1.data1_out=201
+# UVM_INFO SB.sv(29) @ 115: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 33,add=60
+# UVM_INFO SB.sv(32) @ 115: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=201,add=41
+# UVM_INFO DRV.sv(39) @ 120: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 120: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 125: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 125: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 125: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 125: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    125                              
+#   end_time                     time           64    120                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 130: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 31,inf.add0=56, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 135: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 135: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 33,pkt1.data1_out= 33
+# UVM_INFO SB.sv(29) @ 135: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 33,add=60
+# UVM_INFO SB.sv(32) @ 135: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 33,add=60
+# UVM_INFO DRV.sv(39) @ 140: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 145: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 145: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 145: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 145: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    145                              
+#   end_time                     time           64    140                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 150: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=56, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 155: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 155: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 33,pkt1.data1_out= 33
+# UVM_INFO SB.sv(29) @ 155: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 31,add=56
+# UVM_INFO SB.sv(32) @ 155: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 33,add=60
+# UVM_INFO DRV.sv(39) @ 160: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 160: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 165: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 165: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 165: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 165: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    165                              
+#   end_time                     time           64    160                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 170: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 29,inf.add0=45, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 175: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 175: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 31,pkt1.data1_out= 31
+# UVM_INFO SB.sv(29) @ 175: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 31,add=56
+# UVM_INFO SB.sv(32) @ 175: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 31,add=56
+# UVM_INFO DRV.sv(39) @ 180: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 185: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 185: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 185: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 185: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    185                              
+#   end_time                     time           64    180                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 190: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=45, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 195: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 195: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 31,pkt1.data1_out= 31
+# UVM_INFO SB.sv(29) @ 195: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 29,add=45
+# UVM_INFO SB.sv(32) @ 195: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 31,add=56
+# UVM_INFO DRV.sv(39) @ 200: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 200: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 205: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 205: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 205: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 205: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    205                              
+#   end_time                     time           64    200                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 210: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in=152,inf.add0=24, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 215: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 215: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 29,pkt1.data1_out= 29
+# UVM_INFO SB.sv(29) @ 215: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 29,add=45
+# UVM_INFO SB.sv(32) @ 215: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 29,add=45
+# UVM_INFO DRV.sv(39) @ 220: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 225: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 225: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 225: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 225: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    225                              
+#   end_time                     time           64    220                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 230: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=24, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 235: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 235: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 29,pkt1.data1_out= 29
+# UVM_INFO SB.sv(29) @ 235: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=152,add=24
+# UVM_INFO SB.sv(32) @ 235: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 29,add=45
+# UVM_INFO DRV.sv(39) @ 240: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 240: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 245: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 245: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 245: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 245: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    245                              
+#   end_time                     time           64    240                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 250: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 21,inf.add0=53, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 255: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 255: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=152,pkt1.data1_out=152
+# UVM_INFO SB.sv(29) @ 255: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=152,add=24
+# UVM_INFO SB.sv(32) @ 255: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=152,add=24
+# UVM_INFO DRV.sv(39) @ 260: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 265: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 265: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 265: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 265: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    265                              
+#   end_time                     time           64    260                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 270: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=53, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 275: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 275: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=152,pkt1.data1_out=152
+# UVM_INFO SB.sv(29) @ 275: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 21,add=53
+# UVM_INFO SB.sv(32) @ 275: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=152,add=24
+# UVM_INFO DRV.sv(39) @ 280: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 280: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 285: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 285: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 285: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 285: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    285                              
+#   end_time                     time           64    280                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 290: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in=160,inf.add0=37, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 295: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 295: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 21,pkt1.data1_out= 21
+# UVM_INFO SB.sv(29) @ 295: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 21,add=53
+# UVM_INFO SB.sv(32) @ 295: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 21,add=53
+# UVM_INFO DRV.sv(39) @ 300: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 305: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 305: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 305: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 305: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    305                              
+#   end_time                     time           64    300                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 310: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=37, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 315: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 315: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 21,pkt1.data1_out= 21
+# UVM_INFO SB.sv(29) @ 315: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=160,add=37
+# UVM_INFO SB.sv(32) @ 315: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 21,add=53
+# UVM_INFO DRV.sv(39) @ 320: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 320: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 325: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 325: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 325: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 325: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    325                              
+#   end_time                     time           64    320                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 330: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 18,inf.add0=62, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 335: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 335: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=160,pkt1.data1_out=160
+# UVM_INFO SB.sv(29) @ 335: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in=160,add=37
+# UVM_INFO SB.sv(32) @ 335: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=160,add=37
+# UVM_INFO DRV.sv(39) @ 340: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 345: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 345: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 345: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 345: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    345                              
+#   end_time                     time           64    340                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 350: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=62, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 355: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 355: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in=160,pkt1.data1_out=160
+# UVM_INFO SB.sv(29) @ 355: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 18,add=62
+# UVM_INFO SB.sv(32) @ 355: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out=160,add=37
+# UVM_INFO DRV.sv(39) @ 360: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 360: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 365: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 365: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 365: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 365: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    365                              
+#   end_time                     time           64    360                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(27) @ 370: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.data0_in= 30,inf.add0=50, inf.wr0=0
+# UVM_INFO COV.sv(31) @ 375: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 375: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 18,pkt1.data1_out= 18
+# UVM_INFO SB.sv(29) @ 375: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 18,add=62
+# UVM_INFO SB.sv(32) @ 375: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 18,add=62
+# UVM_INFO DRV.sv(39) @ 380: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO MON1.sv(31) @ 385: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 385: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 385: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 385: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# -------------------------------------------------------------------------------------
+# Name                           Type           Size  Value                            
+# -------------------------------------------------------------------------------------
+# pkt                            dram_seq_item  -     @840                             
+#   begin_time                   time           64    385                              
+#   end_time                     time           64    380                              
+#   depth                        int            32    'd2                              
+#   parent sequence (name)       string         3     seq                              
+#   parent sequence (full name)  string         33    uvm_test_top.env.agent1.seqr1.seq
+#   sequencer                    string         29    uvm_test_top.env.agent1.seqr1    
+# -------------------------------------------------------------------------------------
+# UVM_INFO DRV.sv(32) @ 390: uvm_test_top.env.agent1.drv [DRV TRANSACTIONS] inf.add1=50, inf.wr1=1
+# UVM_INFO COV.sv(31) @ 395: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 395: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 18,pkt1.data1_out= 18
+# UVM_INFO SB.sv(29) @ 395: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 30,add=50
+# UVM_INFO SB.sv(32) @ 395: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 18,add=62
+# UVM_INFO DRV.sv(39) @ 400: uvm_test_top.env.agent1.drv [DRV] DRV TRANSACTION TO DUT
+# UVM_INFO SEQ.sv(46) @ 400: uvm_test_top.env.agent1.seqr1@@seq [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO MON1.sv(31) @ 405: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 405: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 405: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 405: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# UVM_INFO COV.sv(31) @ 415: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 415: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 30,pkt1.data1_out= 30
+# UVM_INFO SB.sv(29) @ 415: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 30,add=50
+# UVM_INFO SB.sv(32) @ 415: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 30,add=50
+# UVM_INFO MON1.sv(31) @ 425: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 425: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 425: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 425: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# UVM_INFO COV.sv(31) @ 435: uvm_test_top.env.cov [SEQ] SEQUENCE TRANSACTIONS
+# UVM_INFO SB.sv(42) @ 435: uvm_test_top.env.sb [SB MATCHED] DATA pkt.data0_in= 30,pkt1.data1_out= 30
+# UVM_INFO SB.sv(29) @ 435: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON1
+# sb data_in= 30,add=50
+# UVM_INFO SB.sv(32) @ 435: uvm_test_top.env.sb [SB] TRANSACTIONS FROM MON2
+# sb data_out= 30,add=50
+# UVM_INFO MON1.sv(31) @ 445: uvm_test_top.env.agent1.mon1 [MON1] MON1 TRANSACTIONS
+# UVM_INFO MON1.sv(33) @ 445: uvm_test_top.env.agent1.mon1 [MON] MON TRANSACTIONS
+# UVM_INFO MON2.sv(32) @ 445: uvm_test_top.env.agent2.mon2 [MON2] MON2 TRANSACTIONS
+# UVM_INFO MON2.sv(35) @ 445: uvm_test_top.env.agent2.mon2 [MON] MON TRANSACTIONS
+# UVM_INFO C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 450: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  231
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [DRV]    20
+# [DRV TRANSACTIONS]    20
+# [MON]    46
+# [MON1]    22
+# [MON2]    21
+# [RNTST]     1
+# [SB]    46
+# [SB MATCHED]    22
+# [SEQ]    32
+# [TEST_DONE]     1
+# ** Note: $finish    : C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 450 ns  Iteration: 54  Instance: /dram_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
