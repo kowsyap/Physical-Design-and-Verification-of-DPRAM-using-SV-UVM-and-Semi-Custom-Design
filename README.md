@@ -21,6 +21,14 @@ Memory Level Verification of Dual Port RAM using SystemVerilog and Universal Ver
 * **write enable signals :** wr0,wr1
 * **8-bit data outputs   :** data0_out,data1_out
 
+**Design** [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Design/design.v)
+
+**Testbench** [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Design/testbench.v)
+
+**Graph**
+
+![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph3.PNG)
+
 ## VERIFICATION
 
 Verification Environment is used to check the functional correctness of the Design Under Test (DUT) by generating and driving a predefined input sequence to a design, capturing the design output and comparing with-respect-to expected output.
