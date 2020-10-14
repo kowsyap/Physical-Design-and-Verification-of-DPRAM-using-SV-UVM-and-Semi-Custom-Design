@@ -106,7 +106,7 @@ The Universal Verification Methodology (UVM) is a standardized methodology for v
 
 ### Components and Hierarchy
 
-Here, used analysis ports to tranfer data from one component to another
+Here, used analysis ports to transfer data from one component to another
 
 **OBJECTS :** 
 
