@@ -58,7 +58,7 @@ In this project we used 2 different verification methodologies. They are:
   - Driver2 -> Drives the stimulus to second port to read the previous written data [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/drv2.sv)
 * **Monitor	:** Monitor the design input-output ports to capture design activity
   - Monitor1 -> Monitor the design input-output ports of first port [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/mon1.sv)
-  - Monitor1 -> Monitor the design input-output ports of second port [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/mon2.sv)
+  - Monitor2 -> Monitor the design input-output ports of second port [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/mon2.sv)
 * **Scoreboard :**	Checks output from the design with expected behavior from the driver or TxGen [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/sb.sv)
 * **Environment	:** Contains all the verification components mentioned above [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/env.sv)
 * **Test :**	Contains the environment that can be tweaked with different configuration settings [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/test.sv)
