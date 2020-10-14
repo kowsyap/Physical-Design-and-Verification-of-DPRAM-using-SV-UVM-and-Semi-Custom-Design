@@ -37,7 +37,7 @@ Verification Environment is used to check the functional correctness of the Desi
 * Verification contains many phases that includes Testcase generation, coverage, monitor ...,etc
 * Before tape-out our design should be verified more than 90% successfully
 
-In this project we used 2 different verfication methodologies. They are:
+In this project we used 2 different verification methodologies. They are:
 * [**SV Verification**](#sv-environment)
 * [**UVM Verification**](#uvm-environment)
 
