@@ -78,6 +78,14 @@ In this project we used 2 different verification methodologies. They are:
 > run
 ```
 
+### Steps to generate coverage report
+```
+> vlib work
+> vlog -coveropt 3 +cover +acc top.sv
+> vsim -coverage -vopt work.top -c -do "coverage save -onexit -directive -codeAll coverage.ucdb; run 1000"
+> vcover report -html coverage.ucdb
+```
+
 ### Result
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans1a.PNG)
