@@ -67,18 +67,11 @@ In this project we used 2 different verification methodologies. They are:
 * **Top :** Contains all the components, assigns clock and assembles DUT and Test with Interface [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/top.sv)
 
 
-### Steps to Compile and Run
+### Steps to Compile, Run and generate Coverage report
 
 1. Open Questasim
-2. Open project file
-3. Go to compile and click on compile all
-4. go to transcript and type
-```
-> vsim top
-> run
-```
-
-### Steps to generate coverage report
+2. Open project / Change the directory 
+3. Go th transcript ad type
 ```
 > vlib work
 > vlog -coveropt 3 +cover +acc top.sv
@@ -154,15 +147,16 @@ The components of an agent are,
 
 * **TOP :** Top is the module which assembles test, DUT and interface, assigns clock and runs the test [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/TOP.sv)
 
-### Steps to Compile and Run
+### Steps to Compile, Run and generate Coverage report
+
 1. Download UVM 1.1d library and save it in path: C:/questasim64_10.7c/verilog_src/ (assume questa version be 10.7c)
 2. Open Questasim
-3. Change dirctory and open project file
+3. Change dirctory / open project file
 4. go to transcript and type
 ```
-> vlog +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/uvm.sv  +incdir+. TOP.sv +define+UVM_NO_DPI
-> vsim dram_top
-> run -all
+> vlog -coveropt 3 +cover +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src +incdir+C:/questasim64_10.7c/verilog_src/uvm-1.1d/src C:/questasim64_10.7c/verilog_src/uvm-1.1d/src/uvm.sv  +incdir+. TOP.sv +define+UVM_NO_DPI
+> vsim -coverage -vopt work.dram_top -c -do "coverage save -onexit -directive -codeAll coverage2.ucdb; run -all"
+> vcover report -html coverage2.ucdb
 ```
 
 ### Result
