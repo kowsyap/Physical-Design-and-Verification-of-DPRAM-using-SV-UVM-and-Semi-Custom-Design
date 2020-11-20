@@ -1,6 +1,4 @@
-# Memory Level Verification of DPRAM using SV and UVM
-
-Memory Level Verification of Dual Port RAM using SystemVerilog and Universal Verification Methodology Environments with assertions,functional coverage and code coverage report
+# Physical-Design-and-Verification-of-DPRAM-using-SV-UVM-and-Semi-Custom-Design
 
 ## Design
 
@@ -25,11 +23,16 @@ Memory Level Verification of Dual Port RAM using SystemVerilog and Universal Ver
 
 **Testbench** [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Design/testbench.v)
 
-**Graph**
+**Waveform**
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph3.PNG)
 
-## VERIFICATION
+
+## Memory Level Verification of DPRAM using SV and UVM
+
+Memory Level Verification of Dual Port RAM using SystemVerilog and Universal Verification Methodology Environments with assertions,functional coverage and code coverage report
+
+### VERIFICATION
 
 Verification Environment is used to check the functional correctness of the Design Under Test (DUT) by generating and driving a predefined input sequence to a design, capturing the design output and comparing with-respect-to expected output.
 
@@ -41,13 +44,13 @@ In this project we used 2 different verification methodologies. They are:
 * [**SV Verification**](#sv-environment)
 * [**UVM Verification**](#uvm-environment)
 
-## SV ENVIRONMENT
+### SV ENVIRONMENT
 
-### Architecture
+#### Architecture
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/architecture/sv_architecture.jpg)
 
-### Components and Hierarchy 
+#### Components and Hierarchy 
 * **Mailbox :** Mailbox is a way to allow different processes to exchange data between each other
 * **Base Packet :** It is a base class which contains variables or properties which need to be sent and received [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/pkt.sv)
 * **Configurations :** It is a class with configurations to different test cases and command types [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/cfg.sv)
@@ -67,7 +70,7 @@ In this project we used 2 different verification methodologies. They are:
 * **Top :** Contains all the components, assigns clock and assembles DUT and Test with Interface [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/SV_ENVIRONMENT/top.sv)
 
 
-### Steps to Compile, Run and generate Coverage report
+#### Steps to Compile, Run and generate Coverage report
 
 1. Open Questasim
 2. Open project / Change the directory 
@@ -79,33 +82,33 @@ In this project we used 2 different verification methodologies. They are:
 > vcover report -html coverage.ucdb
 ```
 
-### Result
+#### Result
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans1a.PNG)
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans1b.PNG)
 
-### Graph
+#### Graph
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph1.PNG)
 
-### Coverage
+#### Coverage
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/cover1.PNG)
 
-### Report
+#### Report
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report1.PNG)
 
-## UVM ENVIRONMENT
+### UVM ENVIRONMENT
 
 The Universal Verification Methodology (UVM) is a standardized methodology for verifying integrated circuit designs. 
 
-### Architecture
+#### Architecture
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/architecture/uvm_architecture.jpg)
 
-### Components and Hierarchy
+#### Components and Hierarchy
 
 Here, used analysis ports to transfer data from one component to another
 
@@ -147,7 +150,7 @@ The components of an agent are,
 
 * **TOP :** Top is the module which assembles test, DUT and interface, assigns clock and runs the test [|source code|](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/UVM_ENVIRONMENT/TOP.sv)
 
-### Steps to Compile, Run and generate Coverage report
+#### Steps to Compile, Run and generate Coverage report
 
 1. Download UVM 1.1d library and save it in path: C:/questasim64_10.7c/verilog_src/ (assume questa version be 10.7c)
 2. Open Questasim
@@ -159,23 +162,27 @@ The components of an agent are,
 > vcover report -html coverage2.ucdb
 ```
 
-### Result
+#### Result
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans2a.PNG)
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/trans2b.PNG)
 
-### Graph
+#### Graph
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/graph2.PNG)
 
-### Coverage
+#### Coverage
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/cover2.PNG)
 
-### Report
+#### Report
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report2.PNG)
+
+## Physical Design using Semi Custom Design with Cadence
+
+
 
 ```
 For queries: 
