@@ -1,6 +1,6 @@
 # Physical-Design-and-Verification-of-DPRAM-using-SV-UVM-and-Semi-Custom-Design
 
-## Design
+## **Design**
 
 **Abstract :** Asynchronous multiprocessor systems require a means to transmit data between two independently running processors. Dual port memory provides a common memory accessible to both processors that can be used to share and transmit data and system status between the two processors. The DS1609 is a dual-port memory with 256 bytes of SRAM memory that is accessed via two separate 8-bit multiplexed address/data ports. 
 
@@ -33,7 +33,7 @@
 
 Memory Level Verification of Dual Port RAM using SystemVerilog and Universal Verification Methodology Environments with assertions,functional coverage and code coverage report
 
-### VERIFICATION
+### **VERIFICATION**
 
 Verification Environment is used to check the functional correctness of the Design Under Test (DUT) by generating and driving a predefined input sequence to a design, capturing the design output and comparing with-respect-to expected output.
 
@@ -100,6 +100,8 @@ In this project we used 2 different verification methodologies. They are:
 #### Report
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report1.PNG)
+
+-----
 
 ### UVM ENVIRONMENT
 
@@ -180,6 +182,8 @@ The components of an agent are,
 #### Report
 
 ![](https://github.com/kowsyap/Memory-Level-Verification-of-DPRAM-using-SV-and-UVM/blob/main/Extras/report2.PNG)
+
+***
 
 ## Physical Design using Semi Custom Design with Cadence
 
