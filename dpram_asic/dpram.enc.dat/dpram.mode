@@ -1,0 +1,105 @@
+if {![namespace exists ::IMEX]} { namespace eval ::IMEX {} }
+set ::IMEX::dataVar [file dirname [file normalize [info script]]]
+set ::IMEX::libVar ${::IMEX::dataVar}/libs
+
+catch { setAnalysisMode -analysisType bcwc }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation sdcControl }
+catch { setAnalysisMode -skew true }
+catch { setAnalysisMode -virtualIPO false }
+catch { setOptMode -activeHoldViews { best worst } }
+catch { setOptMode -activeSetupViews { worst } }
+catch { setOptMode -autoHoldViews { best } }
+catch { setOptMode -autoSetupViews { worst} }
+catch { setOptMode -autoTDGRSetupViews { worst} }
+catch { setOptMode -autoViewHoldTargetSlack 0 }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -effort high }
+catch { setOptMode -fixCap true }
+catch { setOptMode -fixFanoutLoad false }
+catch { setOptMode -fixTran true }
+catch { setOptMode -setupTargetSlack 0 }
+setExtractRCMode  -engine preRoute
+catch {setNanoRouteMode -quiet -droutePostRouteSpreadWire "1"}
+catch {setNanoRouteMode -quiet -drouteUseMinSpacingForBlockage auto}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 52.400000}
+catch {setNanoRouteMode -quiet -routeStrictlyHonorNonDefaultRule "false"}
+catch {setNanoRouteMode -quiet -routeWithSiDriven true}
+catch {setNanoRouteMode -quiet -routeWithSiPostRouteFix false}
+catch {setNanoRouteMode -quiet -routeWithTimingDriven true}
+catch {setNanoRouteMode -quiet -timingEngine ""}
+
+catch { setPlaceMode -modulePlan true }
+catch { setPlaceMode -place_design_floorplan_mode false }
+catch { setPlaceMode -place_detail_check_route false }
+catch { setPlaceMode -place_detail_preserve_routing false }
+catch { setPlaceMode -place_detail_remove_affected_routing false }
+catch { setPlaceMode -place_detail_swap_eeq_cells false }
+catch { setPlaceMode -place_global_clock_gate_aware false }
+catch { setPlaceMode -place_global_cong_effort auto }
+catch { setPlaceMode -place_global_ignore_scan false }
+catch { setPlaceMode -place_global_ignore_spare true }
+catch { setPlaceMode -place_global_module_aware_spare false }
+catch { setPlaceMode -place_global_place_io_pins true }
+catch { setPlaceMode -place_global_reorder_scan true }
+catch { setPlaceMode -powerDriven false }
+catch { setPlaceMode -timingDriven true }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setUsefulSkewMode -ecoRoute false }
+catch { setUsefulSkewMode -maxAllowedDelay 1 }
+catch { setUsefulSkewMode -maxSkew false }
+catch { setUsefulSkewMode -noBoundary false }
+catch { setUsefulSkewMode -useCells {BUFX1 BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX8 BUFXL CLKBUFX1 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX8 CLKBUFXL DLY1X1 DLY2X1 DLY3X1 DLY4X1 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX8 CLKINVXL INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX8 INVXL} }
+catch { setSrouteMode -viaConnectToShape noshape }
+catch { set_verify_drc_mode -area {0 0 0 0} }
+catch { set_verify_drc_mode -check_implant true }
+catch { set_verify_drc_mode -check_implant_across_rows false }
+catch { set_verify_drc_mode -check_ndr_spacing false }
+catch { set_verify_drc_mode -check_same_via_cell false }
+catch { set_verify_drc_mode -disable_rules "" }
+catch { set_verify_drc_mode -exclude_pg_net false }
+catch { set_verify_drc_mode -ignore_trial_route false }
+catch { set_verify_drc_mode -limit 1000 }
+catch { set_verify_drc_mode -report ${::IMEX::libVar}/misc/dpram.drc.rpt }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setTrialRouteMode -handlePreroute true }
+catch { setTrialRouteMode -keepMarkedOptRoutes true }
+catch { setAddRingMode -avoid_short false }
+catch { setAddRingMode -extend_over_row false }
+catch { setAddRingMode -ignore_rows false }
+catch { setAddRingMode -orthogonal_only true }
+catch { setAddRingMode -ring_target default }
+catch { setAddRingMode -skip_crossing_trunks none }
+catch { setAddRingMode -skip_via_on_pin standardcell }
+catch { setAddRingMode -skip_via_on_wire_shape noshape }
+catch { setAddRingMode -stacked_via_bottom_layer Metal1 }
+catch { setAddRingMode -stacked_via_top_layer Metal6 }
+catch { setAddRingMode -via_using_exact_crossover_size true }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setAddStripeMode -allow_jog {padcore_ring block_ring} }
+catch { setAddStripeMode -break_at none }
+catch { setAddStripeMode -extend_to_closest_target none }
+catch { setAddStripeMode -ignore_block_check false }
+catch { setAddStripeMode -ignore_nondefault_domains false }
+catch { setAddStripeMode -orthogonal_only true }
+catch { setAddStripeMode -partial_set_thru_domain false }
+catch { setAddStripeMode -route_over_rows_only false }
+catch { setAddStripeMode -rows_without_stripes_only false }
+catch { setAddStripeMode -spacing_from_block 0 }
+catch { setAddStripeMode -spacing_type edge_to_edge }
+catch { setAddStripeMode -split_vias false }
+catch { setAddStripeMode -stacked_via_bottom_layer Metal1 }
+catch { setAddStripeMode -stacked_via_top_layer Metal6 }
+catch { setAddStripeMode -stop_at_last_wire_for_area false }
+catch { setAddStripeMode -stripe_min_length 0 }
+catch { setAddStripeMode -trim_antenna_back_to_shape none }
+catch { setAddStripeMode -via_using_exact_crossover_size false }
+catch { setRouteMode -earlyGlobalHonorMsvRouteConstraint false }
+catch { setRouteMode -earlyGlobalRoutePartitionPinGuide true }
+catch { setRouteMode -earlyGlobalRouteSecondPG false }
+catch { setEndCapMode -boundary_tap false }
